@@ -3,16 +3,13 @@
  * @Date 17-9-22
  */
 
-import {
-  separator,
-  extract_id, extract_class, extract_tag_name, extract_nth, extract_attr
-} from './reg'
+import { separator, extract_id, extract_class, extract_tag_name, extract_nth, extract_attr } from './reg'
 import { ASSOCIATE_MAP } from './constants'
 
 /**
  * @typedef {Object} Token
- * @property {?string} tag_name
  * @property {?string} id
+ * @property {?string} tag_name
  * @property {Array<string>} class_name
  * @property {?string} nth_child
  * @property {Array<string>} attributes

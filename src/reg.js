@@ -14,7 +14,7 @@ const CLASS_NAME_SET = '[a-zA-Z_-]'
 const ASSOCIATE = [
   '\\s*>\\s*',      // children
   '\\s*\\+\\s*',    // after
-  '\\s+'            // insize
+  '\\s+'            // inside
 ].join('\|')
 
 // attributes
@@ -26,7 +26,7 @@ const ASSOCIATE_REG = new RegExp(`(${ASSOCIATE})`)
 const TAG_NAME_REG = new RegExp(`^(${TAG_NAME_SET}+)`)
 const IDENTIFY_REG = new RegExp(`(?:#(${IDENTIFY_SET}))`)
 const CLASS_REG = new RegExp(`(?:\\.(${CLASS_NAME_SET}+))`, 'g')
-const NTH_CHILD_REG = new RegExp(`(\:(nth-child\\((\\w+)\\)))`)
+const NTH_CHILD_REG = new RegExp(`(\:(nth-child\\((\.+)\\)))`)
 const ATTRIBUTE_REG = new RegExp(`(${ATTRIBUTES})`, 'g')
 
 /**
@@ -116,6 +116,13 @@ function extract_nth (selector) {
  * 提取选择器中的attribute部份
  * @param {string} selector
  * @return {Array<string>}
+ *
+ * @example
+ * ```js
+ * extract_attr('div[href*=www]')              // ['[href*=www]']
+ * extract_attr('div')                         // []
+ * extract_attr('div[href*=www][data-item^=a]) // ['[href*=www]', '[data-item^=a]']
+ * ```
  */
 function extract_attr (selector) {
   const arr = selector.match(ATTRIBUTE_REG)
