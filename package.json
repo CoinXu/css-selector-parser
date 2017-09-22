@@ -1,0 +1,31 @@
+{
+  "name": "css-selector-parser",
+  "author": "CoinXu<https://github/CoinXu>",
+  "description": "Parse css-slector to structuralization token",
+  "version": "0.0.0",
+  "keywords": [
+    "selector parser",
+    "css selecotr",
+    "selector token"
+  ],
+  "scripts": {
+    "bundle": "./node_modules/.bin/webpack",
+    "build": "rm -r ./lib && ./node_modules/.bin/babel ./src --out-dir ./lib",
+    "test": "./node_modules/.bin/mocha ./__test__/index.js",
+    "prepublish": "npm run build"
+  },
+  "main": "./lib",
+  "devDependencies": {
+    "webpack": "^3.6.0",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-register": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.23.0",
+    "mocha": "^3.5.3"
+  },
+  "license": "MIT"
+}
