@@ -16,7 +16,7 @@ import { ASSOCIATE_MAP } from './constants'
  * @property {Array<string>} class_name
  * @property {?string} nth_child
  * @property {Array<string>} attributes
- * @property {Token} [child]
+ * @property {Token} [children]
  * @property {Token} [inside]
  * @property {Token} [after]
  * @property {Token} [precede]

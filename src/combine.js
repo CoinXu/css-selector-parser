@@ -35,9 +35,9 @@ export default function (token) {
       selector.push(ot.attributes.join(''))
     }
 
-    if (ot.child) {
+    if (ot.children) {
       selector.push(` ${ASSOCIATE_MAP_MIRROR.child} `)
-      ot = ot.child
+      ot = ot.children
       continue
     }
 

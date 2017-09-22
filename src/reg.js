@@ -12,9 +12,9 @@ const CLASS_NAME_SET = '[a-zA-Z_-]'
 // 匹配元素关系
 // TODO 位置交换会出现Bug
 const ASSOCIATE = [
-  '\\s*>\\s*',      // 父子
-  '\\s*\\+\\s*',    // 之后
-  '\\s+'            // 包含
+  '\\s*>\\s*',      // children
+  '\\s*\\+\\s*',    // after
+  '\\s+'            // insize
 ].join('\|')
 
 // attributes

@@ -4,7 +4,7 @@
  */
 
 const ASSOCIATE_MAP = {
-  '>': 'child',
+  '>': 'children',
   ' ': 'inside',
   '+': 'after',
   '~': 'preceded',
@@ -12,7 +12,7 @@ const ASSOCIATE_MAP = {
 }
 
 const ASSOCIATE_MAP_MIRROR = {
-  child: '>',
+  children: '>',
   inside: ' ',
   after: '+',
   preceded: '~',
