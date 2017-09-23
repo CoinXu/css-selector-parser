@@ -42,7 +42,7 @@ export default function (selector) {
   for (i = 0; i < len; i += 2) {
     str = list[i]
     store.selector = str
-    store.entire_selector = list.slice(0, i + 1)
+    store.entire_selector = list.slice(0, i + 1).join('')
     store.id = extract_id(str)
     store.tag_name = extract_tag_name(str)
     store.class_name = extract_class(str)

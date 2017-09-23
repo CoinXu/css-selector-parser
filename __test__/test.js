@@ -125,7 +125,15 @@ describe('parse', function () {
   }
 
   function creator (o) {
-    return ['id', 'tag_name', 'class_name', 'nth_child', 'attributes'].reduce(function (p, c) {
+    return [
+      'selector',
+      'entire_selector',
+      'id',
+      'tag_name',
+      'class_name',
+      'nth_child',
+      'attributes'
+    ].reduce(function (p, c) {
       p[c] = o[c]
       return p
     }, {})
