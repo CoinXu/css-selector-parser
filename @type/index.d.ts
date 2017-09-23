@@ -11,6 +11,7 @@ declare namespace parser {
   // =================
   interface Token {
     selector: string
+    entire_selector: string
     id: string | null
     tag_name: string | null
     class_name: string[]

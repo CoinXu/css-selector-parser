@@ -9,6 +9,7 @@ import { ASSOCIATE_MAP } from './constants'
 /**
  * @typedef {Object} Token
  * @property {string}        selector
+ * @property {string}        entire_selector
  * @property {?string}       id
  * @property {?string}       tag_name
  * @property {Array<string>} class_name
@@ -41,6 +42,7 @@ export default function (selector) {
   for (i = 0; i < len; i += 2) {
     str = list[i]
     store.selector = str
+    store.entire_selector = list.slice(0, i + 1)
     store.id = extract_id(str)
     store.tag_name = extract_tag_name(str)
     store.class_name = extract_class(str)
