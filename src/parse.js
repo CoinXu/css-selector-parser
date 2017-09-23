@@ -8,16 +8,17 @@ import { ASSOCIATE_MAP } from './constants'
 
 /**
  * @typedef {Object} Token
- * @property {?string} id
- * @property {?string} tag_name
+ * @property {string}        selector
+ * @property {?string}       id
+ * @property {?string}       tag_name
  * @property {Array<string>} class_name
- * @property {?string} nth_child
+ * @property {?string}       nth_child
  * @property {Array<string>} attributes
- * @property {Token} [children]
- * @property {Token} [inside]
- * @property {Token} [after]
- * @property {Token} [precede]
- * @property {Token} [undef]
+ * @property {Token}         [children]
+ * @property {Token}         [inside]
+ * @property {Token}         [after]
+ * @property {Token}         [precede]
+ * @property {Token}         [undef]
  */
 
 /**
@@ -39,8 +40,9 @@ export default function (selector) {
 
   for (i = 0; i < len; i += 2) {
     str = list[i]
-    store.tag_name = extract_tag_name(str)
+    store.selector = str
     store.id = extract_id(str)
+    store.tag_name = extract_tag_name(str)
     store.class_name = extract_class(str)
     store.nth_child = extract_nth(str)
     store.attributes = extract_attr(str)

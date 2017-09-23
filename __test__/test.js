@@ -135,12 +135,14 @@ describe('parse', function () {
     {
       str: '#identify > div.container',
       token: {
+        selector: '#identify',
         id: 'identify',
         tag_name: null,
         class_name: [],
         nth_child: null,
         attributes: [],
         children: {
+          selector: 'div.container',
           id: null,
           tag_name: 'div',
           nth_child: null,
@@ -159,12 +161,14 @@ describe('parse', function () {
     {
       str: '#identify .container',
       token: {
+        selector: '#identify',
         id: 'identify',
         tag_name: null,
         class_name: [],
         nth_child: null,
         attributes: [],
         inside: {
+          selector: '.container',
           id: null,
           tag_name: null,
           nth_child: null,
@@ -182,18 +186,21 @@ describe('parse', function () {
     {
       str: 'div.container .extract > span',
       token: {
+        selector: 'div.container',
         id: null,
         tag_name: 'div',
         class_name: ['container'],
         nth_child: null,
         attributes: [],
         inside: {
+          selector: '.extract',
           id: null,
           tag_name: null,
           class_name: ['extract'],
           nth_child: null,
           attributes: [],
           children: {
+            selector: 'span',
             id: null,
             tag_name: 'span',
             class_name: [],
@@ -229,12 +236,14 @@ describe('combine', function () {
     {
       str: '#identify > div.container',
       token: {
+        selector: '#identify',
         id: 'identify',
         tag_name: null,
         class_name: [],
         nth_child: null,
         attributes: [],
         children: {
+          selector: 'div.container',
           id: null,
           tag_name: 'div',
           nth_child: null,
@@ -246,12 +255,14 @@ describe('combine', function () {
     {
       str: '#identify .container',
       token: {
+        selector: '#identify',
         id: 'identify',
         tag_name: null,
         class_name: [],
         nth_child: null,
         attributes: [],
         inside: {
+          selector: '.container',
           id: null,
           tag_name: null,
           nth_child: null,
@@ -263,18 +274,21 @@ describe('combine', function () {
     {
       str: 'div.container .extract > span',
       token: {
+        selector: 'div.container',
         id: null,
         tag_name: 'div',
         class_name: ['container'],
         nth_child: null,
         attributes: [],
         inside: {
+          selector: '.extract',
           id: null,
           tag_name: null,
           class_name: ['extract'],
           nth_child: null,
           attributes: [],
           children: {
+            selector: 'span',
             id: null,
             tag_name: 'span',
             class_name: [],
