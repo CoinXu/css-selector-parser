@@ -10,6 +10,7 @@ declare namespace parser {
   // interface
   // =================
   interface Token {
+    selector: string
     id: string | null
     tag_name: string | null
     class_name: string[]
