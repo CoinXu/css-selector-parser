@@ -14,6 +14,7 @@
     "test": "./node_modules/.bin/mocha ./__test__/index.js",
     "prepublish": "npm run build"
   },
+  "typings": "./@type/index.d.ts",
   "main": "./lib",
   "devDependencies": {
     "webpack": "^3.6.0",
