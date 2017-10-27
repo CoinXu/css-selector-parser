@@ -60,7 +60,7 @@ export default function (token) {
     }
 
     if (ot.undef) {
-      selector.push(` ${ASSOCIATE_MAP_MIRROR.child} `)
+      selector.push(` ${ASSOCIATE_MAP_MIRROR.undef} `)
       ot = ot.undef
       continue
     }
