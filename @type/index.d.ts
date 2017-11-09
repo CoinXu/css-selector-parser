@@ -42,4 +42,17 @@ declare namespace parser {
   export function extract_tag_name (selector: string): string | null
   export function extract_nth (selector: string): string | null
   export function extract_attr (selector: string): string[]
+
+  // ==============
+  // regulation
+  // ==============
+
+  export namespace Regulation {
+    export function creator (regulation: string): RegExp
+    export function test (str: string, regulation: string): boolean
+    export function max_directory (regulations: string[]): string[]
+    export function max_length (regulations: string[]): string[]
+    export function match (str: string, regulations: string[]): string[]
+    export function exec (str: string, regulations: string[]): string | null
+  }
 }
