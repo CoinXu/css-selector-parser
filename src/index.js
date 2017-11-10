@@ -6,7 +6,7 @@
 import { extract_id, extract_class, extract_tag_name, extract_nth, extract_attr, separator } from './reg'
 import parse from './parse'
 import combine from './combine'
-import * as Regulation from 'regulation'
+import * as Regulation from './regulation'
 
 export {
   parse,
